@@ -6,11 +6,8 @@ def main():
 
 def get_book_text(path):
     with open(path) as p:
-        return p.read()
+        return p.read()  
     
-def get_book_num(book_text):
-    book_words_list = book_text.split()
-    return len(book_words_list)
-    
+from stats import get_book_num
 
 main()
