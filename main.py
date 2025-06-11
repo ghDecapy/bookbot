@@ -1,9 +1,11 @@
-def get_book_text(book_path):
-    with open(book_path) as b:
-        book_content = b.read()
-        return print(book_content)
-    
 def main():
-    get_book_text("books/frankenstein.txt")
+    book_path = "books/frankenstein.txt"
+    book_text = get_book_text(book_path)
+    print(book_text)
+
+def get_book_text(path):
+    with open(path) as p:
+        return p.read()
+    
 
 main()
