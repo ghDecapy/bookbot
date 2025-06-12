@@ -1,5 +1,11 @@
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
 def main():
-    book_path = "books/frankenstein.txt"
+    book_path = sys.argv[1]
     book_whole_text = get_book_text(book_path)
     num_words = get_book_num(book_whole_text)
     character_count = counting_characters(book_whole_text)
